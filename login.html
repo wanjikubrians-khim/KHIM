@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login-form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <form action="login.php" method="POST">
+            <div class="txt_field">
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="reg.html">Signup</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

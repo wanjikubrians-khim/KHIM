@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+/*css for whole body*/
+body {
+    background: linear-gradient(135deg, #040935, #143d5d);
+    color: white;
+    font-family: Arial, sans-serif;
+    
+}
+
+/*style for navbar*/
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 7%;
+    background-color: #040935;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    text-decoration: none; 
+    font-weight: bold; 
+    position: left;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: default;
+}
+.navbar a{
+    font-size: 17px;
+    color: white;
+    margin-left: 35px;
+    transition: 0.3s;
+    animation: backwards;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:  rgb(44, 212, 241);;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.navbar ul li {
+    display:inline;
+    margin-right: 10px;
+    
+}
+.navbar .icon {
+    position: absolute;
+    background-color:#0ef;
+    border-radius: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+   
+.navbar .icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/*styling for home section*/
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.contents {
+    flex: 1;
+    text-align: left;
+}
+
+.image {
+    flex: 1;
+    text-align: right;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.1em;
+    margin-top: 0;
+}
+.contents {
+   
+    padding: 20px;
+}
+.section {
+    margin-bottom: 20px;
+    
+}
+
+.section ul {
+    text-align: center;
+    list-style-type:none;
+    
+}
+  
+.section li {
+    margin-bottom: 10px;
+    position: relative;
+    border: #0ef;
+    box-sizing:inherit;
+    display: inline-block;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+
+
+/* Styling for overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+#overlay-content {
+    background-color: #0b07e9;
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+  /* Styling for plan buttons */
+.plan-button {
+    background-color: #040935;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border:rgb(44, 212, 241);
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+  
+.plan-button:hover {
+    background-color: #2297e6;
+}
+
+#proceedButton, #cancelButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#proceedButton:hover, #cancelButton:hover {
+    background-color: #45a049;
+}
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #040935;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+   }
+   
+   .box {
+    background-color: aliceblue;
+    color:rgb(7, 2, 29);
+    
+    flex: 1 0 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+   }
+   
+   .box:hover{
+    box-shadow: 0 10px 20px wheat;
+    background-color: white;
+    color:black;
+    cursor: auto;
+   }
+.button {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: rgb(14, 169, 241);
+}

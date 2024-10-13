@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAZIFI CONNECT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--header section-->
+  <header class="header">
+      <a href="#" class="logo">EAZIFI-CONNECT</a>
+      <nav class="navbar">
+          <a href="index.html" class="active">Home</a>
+          <a href="packages.html">Internet-Packages</a>
+          <a href="about.html">About</a>
+          <a href="#">Contacts</a>
+          <a href="#">FeedBack</a>
+          <a href="#" class="icon"><img src="icon.png" alt=""></a>
+      </nav>
+  </header>  
+
+      <!--home section-->
+  <section id="home" class="section">
+    <div class="contents">
+      <h2><b>Enter the Realm of Fast, <br>Reliable Wi-Fi</b></h2>
+      <p>Your number one choice for high-speed and reliable WiFi. Buy a subscription today!</p>
+        <br><a href="/start" class="button">Start</a>
+    </div>
+    <div class="image">
+            <img src="comp.png" alt="">
+    </div>
+  </section>
+
+        <!--subscription section-->  
+  <section>
+        <!--container with subscription boxes-->
+    <div class="container">
+      <div class="box">
+        <b> unlimited hourly heist</b> <br><br><button type="button" class="plan-button" data-message="unlimited purchase valid for 1hr" data-price="Sh 10">Sh 10</button>            
+      </div>
+      <div class="box">
+            <b>unlimited daily purchase</b><br><br><button type="button" class="plan-button" data-message="1.5GB valid for 24hrs" data-price="Sh 20">Sh 20</button>
+      </div>
+          <div class="box">
+            <b>unlimited weekly bundle</b><br><br><button type="button" class="plan-button" data-message="Unlimited daily one device" data-price="Sh 30"><b>Sh 30</b></button>
+          </div>
+          <div class="box">
+            <b>Unlimited monthly mega</b><br><br><button type="button" class="plan-button" data-message="Unlimited monthly one device" data-price="Sh 500">Sh 500</button>
+      </div>
+    </div>
+    <div id="overlay">
+        <div id="overlay-content">
+              <p id="overlay-message"></p>
+              <button id="proceedButton"><b>Proceed</b></button>
+              <button id="cancelButton">Cancel</button>
+        </div>
+    </div>
+    <div id="overlay">
+            <div id="overlay-content">
+              <p>Please click "Proceed" to be redirected to M-Pesa for purchase.</p>
+              <button onclick="proceedToMpesa()">Proceed</button>
+            </div>
+    </div>
+          
+                    <p>Please make the payment via M-Pesa to the following number: <p>0791710423</p>. Our support team will assist you further.</p>
+    </section> 
+
+    <section id="topup" class="top up">
+      <div class="image">
+        <img src="wifi.png" alt="">
+      </div>
+      <div class="process">
+        <h2>Top Up Your Account</h2><br/><br/>
+
+      </div>
+    </section>
+    <section id="about" class="section">
+            <h2>About</h2>
+            <p>Access uninterrupted connection at the comfort of your room.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Phone: +254791710423</p>
+            <p>Email: yobrahkhim260@gmail.com</p>
+        </section>
+        <footer>
+            <b>EAZIFI@2023</b>
+        </footer>
+    </div>
+
+<script>
+  // JavaScript to handle button click and overlay display
+  document.querySelectorAll('.plan-button').forEach(function (button) {
+      button.addEventListener('click', function () {
+          const message = this.getAttribute('data-message');
+          const price = this.getAttribute('data-price');
+          document.getElementById('overlay-message').innerText = `${message}: ${price}`;
+          document.getElementById('overlay').style.display = 'flex';
+      });
+  });
+
+  // JavaScript to handle "Proceed" button click
+  document.getElementById('proceedButton').addEventListener('click', function () {
+      // Add your redirection logic to M-Pesa or any other action here
+      alert('Redirecting to M-Pesa...');
+  });
+
+  // JavaScript to handle "Cancel" button click
+  document.getElementById('cancelButton').addEventListener('click', function () {
+      document.getElementById('overlay').style.display = 'none';
+  });
+
+  // JavaScript to open login page when "Start" or "Services" button is clicked
+  document.querySelectorAll('.button, .icon').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+          event.preventDefault();
+          let targetPage = 'login.html';
+          // Only open the registration page when clicking on the "Sign Up" link
+          if (link.classList.contains('button') && link.getAttribute('href') === '/start') {
+              targetPage = 'login.html';
+          } else if (link.classList.contains('signup_link')) {
+              targetPage = 'reg.html';
+          }
+          window.location.href = targetPage;
+      });
+  });
+</script>
+
+</body>
+</html>

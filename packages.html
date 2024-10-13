@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="packages.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">EAZIFI-CONNECT</a>
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="packages.html" class="active">INTENET-PACKAGES</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#">CONTACTS</a>
+            <a href="#">HELP</a>
+            <a href="#" class="icon"><img src="icon.png" alt=""></a>
+        </nav>
+    </header>
+    <section>
+        <br>Discover our exciting internet packages and make a selection today!<br>
+        <!--container with subscription boxes-->
+    <div class="container">
+      <div class="box">
+        <b> unlimited hourly heist</b> <br><br><button type="button" class="plan-button" data-message="unlimited purchase valid for 1hr" data-price="Sh 10">Sh 10</button>            
+      </div>
+      <div class="box">
+            <b>unlimited daily purchase</b><br><br><button type="button" class="plan-button" data-message="1.5GB valid for 24hrs" data-price="Sh 20">Sh 20</button>
+      </div>
+          <div class="box">
+            <b>unlimited weekly bundle</b><br><br><button type="button" class="plan-button" data-message="Unlimited daily one device" data-price="Sh 30"><b>Sh 30</b></button>
+          </div>
+          <div class="box">
+            <b>Unlimited monthly mega</b><br><br><button type="button" class="plan-button" data-message="Unlimited monthly one device" data-price="Sh 500">Sh 500</button>
+      </div>
+    </div>
+    <div id="overlay">
+        <div id="overlay-content">
+            <p id="overlay-message"></p>
+              <button id="proceedButton"><b>Proceed</b></button>
+              <button id="cancelButton">Cancel</button>
+        </div>
+    </div>
+    <div id="overlay">
+            <div id="overlay-content">
+              <p>Please click "Proceed" to be redirected to M-Pesa for purchase.</p>
+              <button onclick="proceedToMpesa()">Proceed</button>
+            </div>
+    </div>
+          
+                    <p>Please make the payment via M-Pesa to the following number: <p>0791710423</p>. Our support team will assist you further.</p>
+    </section>
+    <footer>
+            <p>EAZIFI@2023</p>
+    </footer>
+    <script>
+        // JavaScript to handle button click and overlay display
+  document.querySelectorAll('.plan-button').forEach(function (button) {
+      button.addEventListener('click', function () {
+          const message = this.getAttribute('data-message');
+          const price = this.getAttribute('data-price');
+          document.getElementById('overlay-message').innerText = `${message}: ${price}`;
+          document.getElementById('overlay').style.display = 'flex';
+      });
+  });
+
+  // JavaScript to handle "Proceed" button click
+  document.getElementById('proceedButton').addEventListener('click', function () {
+      // Add your redirection logic to M-Pesa or any other action here
+      alert('Redirecting to M-Pesa...');
+  });
+
+  // JavaScript to handle "Cancel" button click
+  document.getElementById('cancelButton').addEventListener('click', function () {
+      document.getElementById('overlay').style.display = 'none';
+  });
+
+
+</script>
+</body>
+</html>
